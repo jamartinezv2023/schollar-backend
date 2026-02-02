@@ -14,5 +14,6 @@ patches:
 
 nameSuffix: -prod
 
-commonLabels:
-  environment: prod
+labels:
+- pairs:
+    environment: prod
