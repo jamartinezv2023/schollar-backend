@@ -3,14 +3,14 @@ kind: Kustomization
 
 resources:
   - ../../base
+  - configmap-prod.yaml   # ← AHORA ES RECURSO
+  - secret-prod.yaml
   - hpa.yaml
 
 patches:
   - path: replicas-patch.yaml
   - path: image-patch.yaml
   - path: resources-patch.yaml
-  - path: configmap-prod.yaml
-  - path: secret-prod.yaml
 
 nameSuffix: -prod
 
